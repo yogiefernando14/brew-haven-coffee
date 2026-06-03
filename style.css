@@ -62,3 +62,34 @@ color:black;
 border:1px solid rgba(255,255,255,.2);
 color:white;
 }
+
+#about{
+text-align:center;
+padding:100px 8%;
+}
+
+#about p{
+max-width:800px;
+margin:auto;
+line-height:1.8;
+opacity:.8;
+}
+
+.stats{
+padding:0 8% 100px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+}
+
+.stat-card{
+background:#111;
+padding:30px;
+border-radius:20px;
+text-align:center;
+}
+
+.stat-card h3{
+font-size:2rem;
+margin-bottom:10px;
+}

@@ -218,7 +218,14 @@ transition:.3s;
 }
 
 .menu-card:hover{
+
 transform:translateY(-10px);
+
+box-shadow:
+0 0 20px rgba(255,255,255,.15),
+0 0 40px rgba(255,255,255,.10),
+0 0 80px rgba(255,255,255,.05);
+
 }
 
 .menu-card img{

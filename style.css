@@ -196,3 +196,35 @@ line-height:1.7;
 margin-bottom:10px;
 opacity:.8;
 }
+
+.cta{
+padding:80px 30px;
+margin:0 8%;
+background:#111;
+border-radius:25px;
+text-align:center;
+}
+
+.cta h2{
+margin-bottom:15px;
+}
+
+.cta p{
+opacity:.8;
+margin-bottom:25px;
+}
+
+.cta a{
+display:inline-block;
+padding:14px 24px;
+background:white;
+color:black;
+text-decoration:none;
+border-radius:12px;
+font-weight:600;
+transition:.3s;
+}
+
+.cta a:hover{
+transform:translateY(-3px);
+}

@@ -134,3 +134,104 @@ closeModal();
 }
 
 });
+
+// =========================
+// COUNTER ANIMATION
+// =========================
+
+const counters = document.querySelectorAll(".counter");
+
+const counterObserver = new IntersectionObserver((entries)=>{
+
+entries.forEach(entry=>{
+
+if(entry.isIntersecting){
+
+const counter = entry.target;
+
+const target = +counter.dataset.target;
+
+let count = 0;
+
+const speed = target / 80;
+
+const updateCounter = ()=>{
+
+count += speed;
+
+if(count < target){
+
+counter.textContent = Math.floor(count);
+
+requestAnimationFrame(updateCounter);
+
+}else{
+
+counter.textContent = target + "+";
+
+}
+
+};
+
+updateCounter();
+
+counterObserver.unobserve(counter);
+
+}
+
+});
+
+});
+
+counters.forEach(counter=>{
+
+counterObserver.observe(counter);
+
+});
+
+
+// =========================
+// RATING COUNTER
+// =========================
+
+const rating = document.querySelector(".counter-rating");
+
+if(rating){
+
+const ratingObserver = new IntersectionObserver((entries)=>{
+
+entries.forEach(entry=>{
+
+if(entry.isIntersecting){
+
+let value = 0;
+
+const target = parseFloat(rating.dataset.target);
+
+const interval = setInterval(()=>{
+
+value += 0.1;
+
+if(value >= target){
+
+value = target;
+
+clearInterval(interval);
+
+}
+
+rating.textContent = value.toFixed(1) + "★";
+
+},40);
+
+ratingObserver.unobserve(rating);
+
+}
+
+});
+
+});
+
+ratingObserver.observe(rating);
+
+}

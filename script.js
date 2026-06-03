@@ -101,3 +101,36 @@ behavior: "smooth"
 });
 
 });
+
+const modal = document.getElementById("productModal");
+const modalTitle = document.getElementById("modalTitle");
+const modalPrice = document.getElementById("modalPrice");
+const modalDesc = document.getElementById("modalDesc");
+const modalImg = document.getElementById("modalImg");
+
+function openModal(title, price, desc, image){
+
+modal.style.display = "flex";
+
+modalTitle.textContent = title;
+modalPrice.textContent = price;
+modalDesc.textContent = desc;
+modalImg.src = image;
+
+}
+
+function closeModal(){
+
+modal.style.display = "none";
+
+}
+
+window.addEventListener("click",(e)=>{
+
+if(e.target === modal){
+
+closeModal();
+
+}
+
+});

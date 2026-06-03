@@ -209,12 +209,14 @@ display:grid;
 grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
 gap:20px;
 }
-
 .menu-card{
 background:#111;
 padding:20px;
 border-radius:20px;
-transition:.3s;
+
+border:1px solid rgba(255,255,255,.05);
+
+transition:all .3s ease;
 }
 
 .menu-card:hover{

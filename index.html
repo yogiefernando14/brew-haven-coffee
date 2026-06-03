@@ -152,7 +152,13 @@ Featured Menu
 
 <div class="menu-grid">
 
-<div class="menu-card">
+<div class="menu-card"
+onclick="openModal(
+'Espresso',
+'$3.50',
+'Rich and bold coffee shot made from premium beans.',
+'https://images.unsplash.com/photo-1517701604599-bb29b565090c?q=80&w=1000&auto=format&fit=crop'
+)">
 
 <img
 src="https://images.unsplash.com/photo-1517701604599-bb29b565090c?q=80&w=1000&auto=format&fit=crop"
@@ -168,7 +174,13 @@ Rich and bold coffee shot.
 
 </div>
 
-<div class="menu-card">
+<div class="menu-card"
+onclick="openModal(
+'Cappuccino',
+'$4.50',
+'Smooth milk foam combined with strong espresso.',
+'https://images.unsplash.com/photo-1497636577773-f1231844b336?q=80&w=1000&auto=format&fit=crop'
+)">
 
 <img
 src="https://images.unsplash.com/photo-1497636577773-f1231844b336?q=80&w=1000&auto=format&fit=crop"
@@ -184,7 +196,13 @@ Smooth milk foam with strong espresso.
 
 </div>
 
-<div class="menu-card">
+<div class="menu-card"
+onclick="openModal(
+'Latte',
+'$5.00',
+'Creamy and balanced coffee flavor for everyday enjoyment.',
+'https://images.unsplash.com/photo-1509042239860-f550ce710b93?q=80&w=1000&auto=format&fit=crop'
+)">
 
 <img
 src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?q=80&w=1000&auto=format&fit=crop"
@@ -197,6 +215,30 @@ alt="Latte">
 <p>
 Creamy and balanced coffee flavor.
 </p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- PRODUCT MODAL -->
+
+<div class="modal" id="productModal">
+
+<div class="modal-content">
+
+<span class="close-btn" onclick="closeModal()">
+&times;
+</span>
+
+<img id="modalImg" src="" alt="Product">
+
+<h2 id="modalTitle"></h2>
+
+<h3 id="modalPrice"></h3>
+
+<p id="modalDesc"></p>
 
 </div>
 

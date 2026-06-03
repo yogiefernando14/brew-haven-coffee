@@ -169,3 +169,30 @@ transition:.3s;
 .gallery-grid img:hover{
 transform:translateY(-10px);
 }
+
+#reviews{
+padding:100px 8%;
+}
+
+#reviews h2{
+text-align:center;
+margin-bottom:40px;
+}
+
+.review-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:20px;
+}
+
+.review-card{
+background:#111;
+padding:30px;
+border-radius:20px;
+}
+
+.review-card p{
+line-height:1.7;
+margin-bottom:10px;
+opacity:.8;
+}
